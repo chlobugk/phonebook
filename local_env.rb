@@ -1,0 +1,5 @@
+ENV['host'] = 'phonebook.cg2ctyhc36qa.us-west-2.rds.amazonaws.com'
+ENV['port'] = '5432'
+ENV['db_name'] = 'phonebook'
+ENV['user'] = 'phonebook'
+ENV['password'] = 'phonebook0328'
