@@ -1,6 +1,17 @@
 table{
+	background-color: lavender;
 	border-collapse: collapse;
 	border-style:solid;
-	border-color:cornflowerblue;
+	border-color:indigo;
 	border-width:4px;
+}
+
+.layout{
+	background-color: lightcyan
+}
+
+.submit{
+	background-color:indigo;
+	color:white;
+	border-color:indigo;
 }

@@ -53,7 +53,7 @@ post '/update' do
 end
 
 post '/delete' do
-	trash_name = params[:trash_name]
-db.exec("DELETE FROM phonebook WHERE first_name = '#{trash_name}' ");
+	trash = params[:trash]
+db.exec("DELETE FROM phonebook WHERE mobile_number = '#{trash}' ");
 redirect '/'
 end
