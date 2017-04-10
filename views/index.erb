@@ -1,20 +1,57 @@
 <form method='post' action='phonebook'>
 
-	First Name<br>
-	<input type='text' name='first_name'><p>
-	Last Name<br>
-	<input type='text' name='last_name'><p>
-	Street Address<br>
-	<input type='text' name='street_address'><p>
-	City<br>
-	<input type='text' name='city'><p>
-	State<br>
-	<input type='text' name='state'><p>
-	Zip<br>
-	<input type='text' name='zip'><p>
-	Cell Phone<br>
-	<input type='text' name='cell_phone'><p>
-	<input type='submit'> 
 
+	<input type='text' name='first_name' placeholder="First Name"><br>
 
+	<input type='text' name='last_name' placeholder="Last Name"><br>
+
+	<input type='text' name='street_address' placeholder="Street Address"><br>
+
+	<input type='text' name='city' placeholder="City"><br>
+
+	<input type='text' name='state' placeholder="State"><br>
+
+	<input type='text' name='zip' placeholder="Zip"><br>
+
+	<input type='text' name='mobile_number' placeholder="Mobile Number"><br>
+	<input type='submit' value='Add Contact'><p> 
+
+</form>
+
+	<table class='table' border='1'>
+		<thread>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Street Address</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip</th>
+				<th>Mobile Number</th>
+			</tr>
+		</thread>
+		 <tbody>
+           <%phonebook.each do |contacts|%>
+           <tr>
+               <td><%=contacts["first_name"] %></td>
+               <td><%=contacts["last_name"] %></td>
+               <td><%=contacts["street_address"] %></td>
+               <td><%=contacts["city"] %></td>
+               <td><%=contacts["state"] %></td>
+               <td><%=contacts["zip"] %></td>
+               <td><%=contacts["mobile_number"] %></td>
+           </tr>
+           <%end%>
+       </tbody>
+   </table>
+<p>
+<form action= "/update" method= "post">
+	<input type = "text" name= "fname" placeholder="First Name"><br>
+   <input type = "text" name= "first_name_update" placeholder="Updated First Name"><br>
+   <input type = "submit" value = "Update Contact">
+</form>
+<p>
+<form action='/delete' method="post">
+	<input type = 'text' name='trash_name' placeholder="First Name"><br>
+	<input type="submit" value="Delete Contact">
 </form>
