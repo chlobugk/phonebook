@@ -45,11 +45,27 @@
        </tbody>
    </table>
 <p>
-<form action= "/update" method= "post">
+<form action="update" method="post">
+	<select name='contact'>
+			<option value='col_first_name'>First Name</option>
+			<option value='col_last_name'>Last Name</option>
+			<option value='col_address'>Street Address</option>
+			<option value='col_city'>City</option>
+			<option value='col_state'>State</option>
+			<option value='col_zip'>Zip</option>
+			<option value='col_cell'>Mobile Number</option>
+	</select><br>
+		<input type="text" name="old_data" placeholder="Mobile Number"><br>
+	  	<input type="text" name="new_data" placeholder="New Data"><br>
+	    <input type="submit" value="Update">
+</form>
+<!-- <form action= "/update" method= "post">
 	<input type = "text" name= "fname" placeholder="First Name"><br>
    <input type = "text" name= "first_name_update" placeholder="Updated First Name"><br>
+   <input type = "text" name= "lname" placeholder="Last Name"><br>
+   <input type = "text" name= "last_name_update" placeholder="Updated Last Name"><br>
    <input type = "submit" value = "Update Contact">
-</form>
+</form> -->
 <p>
 <form action='/delete' method="post">
 	<input type = 'text' name='trash_name' placeholder="First Name"><br>
